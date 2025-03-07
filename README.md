@@ -22,8 +22,8 @@ This script is an essential tool for ensuring that your automated Bitcoin tradin
 | ------------- | ---------------- | ----------------- |
 | New York      | N/A              | N/A               |
 | San Francisco | N/A              | N/A               |
-| Amsterdan     | 0.00s           | 0.00s            |
-| Singapore     | 0.00s           | 0.00s            |
+| Amsterdan     | 1.82s           | 0.23s            |
+| Singapore     | 0.28s           | 0.08s            |
 | London        | 0.00s           | 0.00s            |
 | Frankfurt     | 0.00s           | 0.00s            |
 | Toronto       | 0.00s           | 0.00s            |
