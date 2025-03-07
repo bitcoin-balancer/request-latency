@@ -6,7 +6,7 @@ from tester import get_tester
 # prompt the user to input the required data
 answers: IScriptInput = prompt([
   List('exchange', message='Select an exchange', choices=EXCHANGES),
-  Text('api_key', message='Enter your API Secret'),
+  Text('api_key', message='Enter your API Key'),
   Text('api_secret', message='Enter your API Secret'),
 ])
 

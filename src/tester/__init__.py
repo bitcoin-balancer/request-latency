@@ -1,7 +1,7 @@
 from shared import IScriptInput
-from binance import BinanceTester
-from bitfinex import BitfinexTester
-from kraken import KrakenTester
+from .binance import BinanceTester
+from .bitfinex import BitfinexTester
+from .kraken import KrakenTester
 
 
 def get_tester(input: IScriptInput) -> BinanceTester | BitfinexTester | KrakenTester:
@@ -13,6 +13,9 @@ def get_tester(input: IScriptInput) -> BinanceTester | BitfinexTester | KrakenTe
 
   Returns:
     BinanceTester | BitfinexTester | KrakenTester
+
+  Raises:
+    ValueError: if the exchange is not yet supported.
   """
   match input['exchange']:
     case 'binance':

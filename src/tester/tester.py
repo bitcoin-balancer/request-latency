@@ -1,5 +1,7 @@
-from typing import Callable
+from typing import Callable, Literal, List
 from time import time, sleep
+from datetime import datetime
+from statistics import mean
 from tqdm import tqdm
 
 class Tester:
@@ -28,8 +30,8 @@ class Tester:
       ...
   """
   # configuration
-  REQUEST_FREQUENCY = 2
-  REQUEST_COUNT = 15
+  REQUEST_FREQUENCY = 1
+  REQUEST_COUNT = 5
 
   def __init__(self, api_key: str, api_secret: str):
     self.api_key = api_key
@@ -38,16 +40,17 @@ class Tester:
     self.public_req_errors = 0
     self.private_reqs = []
     self.private_req_errors = 0
-    
 
-  def __delay() -> None:
+
+
+  def __delay(self) -> None:
     """Invokes a delay that should be used between requests.
     """
     sleep(Tester.REQUEST_FREQUENCY)
 
 
 
-  def __run_request(req: Callable[[], None]) -> float:
+  def __run_request(self, req: Callable[[], None]) -> float:
     """Runs a given request and returns the time it took to complete.
     
     Args:
@@ -60,19 +63,70 @@ class Tester:
     start = time()
     req()
     return time() - start
+  
+
+
+  def __output_result_for_req_type(
+      self, 
+      name: Literal['Public', 'Private'], 
+      errors: int, 
+      reqs: List[float]
+  ) -> None:
+    """Outputs the results for a given request type.
+
+    Args:
+      name: Literal['Public', 'Private']
+        The name of the request type.
+      errors: int
+        The number of errors that occurred during the requests.
+      reqs: List[float]
+        The list of request durations.
+    """
+    print (f'\n{name} Requests ({errors} errors):')
+    for i, duration in enumerate(reqs):
+      print (f'{i + 1}) {duration} s')
+    print(f"Mean: {mean(reqs)} s\n")
+
+
+
+  def __output_result(self) -> None:
+    """Performs the final calculations and outputs the results.
+    """
+    print(f'\nDate: {datetime.now()}')
+    self.__output_result_for_req_type('Public', self.public_req_errors, self.public_reqs)
+    self.__output_result_for_req_type('Private', self.private_req_errors, self.private_reqs)
 
 
 
   def run(self) -> None:
     """Runs the latency test for the chosen exchange and stores the results.
     """
+    print('\nRunning...')
     # init the progress bar
     pbar = tqdm(total=Tester.REQUEST_COUNT * 2)
     
     # test the public requests
     for i in range(Tester.REQUEST_COUNT):
-      self.public_reqs.append(self.__run_request(self.__public_request))
-      self.__delay()
-      pbar.update(1)
+      try:
+        self.public_reqs.append(self.__run_request(self._execute_public_request))
+        pbar.update(1)
+        self.__delay()
+      except Exception as e:
+        print(e)
+        self.public_req_errors += 1
 
-    
+    # test the private requests
+    for i in range(Tester.REQUEST_COUNT):
+      try:
+        self.private_reqs.append(self.__run_request(self._execute_private_request))
+        pbar.update(1)
+        self.__delay()
+      except Exception as e:
+        print(e)
+        self.private_req_errors += 1
+
+    # close the progress bar
+    pbar.close()
+
+    # finally, output the results
+    self.__output_result()
