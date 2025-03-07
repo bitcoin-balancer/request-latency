@@ -30,8 +30,8 @@ class Tester:
       ...
   """
   # configuration
-  REQUEST_FREQUENCY = 1
-  REQUEST_COUNT = 5
+  REQUEST_FREQUENCY = 2
+  REQUEST_COUNT = 20
 
   def __init__(self, api_key: str, api_secret: str):
     self.api_key = api_key
@@ -82,7 +82,7 @@ class Tester:
       reqs: List[float]
         The list of request durations.
     """
-    print (f'\n{name} Requests ({errors} errors):')
+    print (f'\n{name} Endpoint ({errors} errors):')
     for i, duration in enumerate(reqs):
       print (f'{i + 1}) {duration} s')
     print(f"Mean: {mean(reqs)} s\n")
