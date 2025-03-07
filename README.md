@@ -26,7 +26,7 @@ This script is an essential tool for ensuring that your automated Bitcoin tradin
 | Singapore     | 0.28s           | 0.08s            |
 | London        | 0.99s           | 0.26s            |
 | Frankfurt     | 1.02s           | 0.24s            |
-| Toronto       | 0.00s           | 0.00s            |
+| Toronto       | 0.61s           | 0.16s            |
 | **Bangalore**     | **0.00s**           | **0.00s**            |
 | Sydney        | 0.00s           | 0.00s            |
 
