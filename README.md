@@ -22,13 +22,13 @@ This script is an essential tool for ensuring that your automated Bitcoin tradin
 | ------------- | ---------------- | ----------------- |
 | New York      | N/A              | N/A               |
 | San Francisco | N/A              | N/A               |
-| Amsterdan     | 0.00ms           | 0.00ms            |
-| Singapore     | 0.00ms           | 0.00ms            |
-| London        | 0.00ms           | 0.00ms            |
-| Frankfurt     | 0.00ms           | 0.00ms            |
-| Toronto       | 0.00ms           | 0.00ms            |
-| **Bangalore**     | **0.00ms**           | **0.00ms**            |
-| Sydney        | 0.00ms           | 0.00ms            |
+| Amsterdan     | 0.00s           | 0.00s            |
+| Singapore     | 0.00s           | 0.00s            |
+| London        | 0.00s           | 0.00s            |
+| Frankfurt     | 0.00s           | 0.00s            |
+| Toronto       | 0.00s           | 0.00s            |
+| **Bangalore**     | **0.00s**           | **0.00s**            |
+| Sydney        | 0.00s           | 0.00s            |
 
 [View test details](./results/binance.md)
 
@@ -38,15 +38,15 @@ This script is an essential tool for ensuring that your automated Bitcoin tradin
 
 | Region        | Public Req. Mean | Private Req. Mean |
 | ------------- | ---------------- | ----------------- |
-| New York      | 0.00ms           | 0.00ms            |
-| San Francisco | 0.00ms           | 0.00ms            |
-| Amsterdan     | 0.00ms           | 0.00ms            |
-| Singapore     | 0.00ms           | 0.00ms            |
-| London        | 0.00ms           | 0.00ms            |
-| Frankfurt     | 0.00ms           | 0.00ms            |
-| Toronto       | 0.00ms           | 0.00ms            |
-| Bangalore     | 0.00ms           | 0.00ms            |
-| Sydney        | 0.00ms           | 0.00ms            |
+| New York      | 0.00s           | 0.00s            |
+| San Francisco | 0.00s           | 0.00s            |
+| Amsterdan     | 0.00s           | 0.00s            |
+| Singapore     | 0.00s           | 0.00s            |
+| London        | 0.00s           | 0.00s            |
+| Frankfurt     | 0.00s           | 0.00s            |
+| Toronto       | 0.00s           | 0.00s            |
+| Bangalore     | 0.00s           | 0.00s            |
+| Sydney        | 0.00s           | 0.00s            |
 
 [View test details](./results/bitfinex.md)
 
@@ -56,15 +56,15 @@ This script is an essential tool for ensuring that your automated Bitcoin tradin
 
 | Region        | Public Req. Mean | Private Req. Mean |
 | ------------- | ---------------- | ----------------- |
-| New York      | 0.00ms           | 0.00ms            |
-| San Francisco | 0.00ms           | 0.00ms            |
-| Amsterdan     | 0.00ms           | 0.00ms            |
-| Singapore     | 0.00ms           | 0.00ms            |
-| London        | 0.00ms           | 0.00ms            |
-| Frankfurt     | 0.00ms           | 0.00ms            |
-| Toronto       | 0.00ms           | 0.00ms            |
-| Bangalore     | 0.00ms           | 0.00ms            |
-| Sydney        | 0.00ms           | 0.00ms            |
+| New York      | 0.00s           | 0.00s            |
+| San Francisco | 0.00s           | 0.00s            |
+| Amsterdan     | 0.00s           | 0.00s            |
+| Singapore     | 0.00s           | 0.00s            |
+| London        | 0.00s           | 0.00s            |
+| Frankfurt     | 0.00s           | 0.00s            |
+| Toronto       | 0.00s           | 0.00s            |
+| Bangalore     | 0.00s           | 0.00s            |
+| Sydney        | 0.00s           | 0.00s            |
 
 [View test details](./results/kraken.md)
 
