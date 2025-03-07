@@ -23,12 +23,12 @@ This script is an essential tool for ensuring that your automated Bitcoin tradin
 | New York      | N/A              | N/A               |
 | San Francisco | N/A              | N/A               |
 | Amsterdan     | 1.82s           | 0.23s            |
-| Singapore     | 0.28s           | 0.08s            |
+| **Singapore**     | **0.28s**           | **0.08s**            |
 | London        | 0.99s           | 0.26s            |
 | Frankfurt     | 1.02s           | 0.24s            |
 | Toronto       | 0.61s           | 0.16s            |
 | Bangalore     | 0.43s           | 0.19s            |
-| Sydney        | 0.00s           | 0.00s            |
+| Sydney        | 0.64s           | 0.11s            |
 
 [View test details](./results/binance.md)
 
